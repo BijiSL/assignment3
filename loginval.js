@@ -1,42 +1,23 @@
-var em=document.getElementById("email");
-var emailerr=document.getElementById("emailerr");
-var phoneinput = document.getElementById("phone");
-var phoneerr=document.getElementById("phoneerr");
-var psw = document.getElementById("password");
+var email=document.getElementById("email1");
+var err1=document.getElementById("err1");
+var psw = document.getElementById("password1");
 var pswstrength = document.getElementById('pswstrength');
 var pswvalidity = document.getElementById('pswvalidity');
-
 var flag=0;
-em.addEventListener("keyup", function()
+email.addEventListener("keyup", function()
 {
     let regEx1 = /^([a-zA-Z0-9.-]+)@([a-zA-z0-9-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-    if(regEx1.test(em.value)){
-        emailerr.innerText = "Valid email address";
-        em.style.borderColor = 'green';
+    if(regEx1.test(email.value)){
+        err1.innerText = "Valid email address";
+        email.style.borderColor = 'green';
         flag=1;
     }
     else {
-        emailerr.innerText = "Invalid email address";
-        em.style.borderColor = 'red';
+        err1.innerText = "Invalid email address";
+        email.style.borderColor = 'red';
         flag=0;
     }
     });
-    phoneinput.addEventListener("keyup", function(){
-    let regEx2 = /^(0)?(\+)?(91)?[ \-.]?\d{3}[ \-.]?\d{3}[ \-.]?\d{4}$/;
-    console.log(phoneinput.value);
-    if(regEx2.test(phoneinput.value)){
-        phoneerr.innerText = "Valid mobile number";
-        phoneinput.style.borderColor = 'green';
-        flag=1;
-        
-    }
-    else{
-        phoneerr.innerText = "Invalid mobile number";
-        phoneinput.style.borderColor = 'red';
-        flag=0;
-    }});
-    // return !!flag;
-    
     psw.addEventListener("keyup", function(){
         let pswRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
         if(pswRegex.test(psw.value)){
@@ -92,9 +73,3 @@ em.addEventListener("keyup", function()
         return !!flag;
     }
     
-    
-    
-
-
-    
-   

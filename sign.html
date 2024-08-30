@@ -22,34 +22,34 @@
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="text" class="mt-4 form-control p-3 border-input" placeholder="Username" id="email">
-                            <span id="err1"></span>
+                            <span id="emailerr"></span>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password"class="mt-4 form-control p-3 border-input" placeholder="Password">
-            <span id="err3"></span>
+                            <input type="password" class="mt-4 form-control p-3 border-input" placeholder="Password" id="password"> 
+                            <div class="d-flex justify-content-between" id="pwdLabels">
+                                <span class="fs-5" id="pswvalidity"></span>
+                                <span class="fs-5" id="pswstrength"></span>
+                  
+                    <div class="d-flex justify-content-between" id="pwdLabels">
+                        <span class="fs-5" id="pwdValidity"></span>
+                        <span class="fs-5" id="pwdStrength"></span>
+                    </div>
+                    
                         </div>
                         <div class="form-group">
                             <label for="phone number">Phone Number</label>
                             <input type="phone" class="mt-4 form-control p-3 border-input" placeholder="Phone number" id="phone">
-                            <div class="invalid-feedback">Please enter a valid phone number.</div>
-            </div><br><br>
-                            <span id="err2"></span>
-                        </div>
-                    
-                       
-
-                        <a href="index.html" onclick="return validate()" id="btn" class="btn btn-primary">Sign Up</a>
-                        
+                            <span id="phoneerr"></span>
+            </div>
+            <br><br> </div>
+                      <a onclick="return validate();"href="index.html" id="btn" class="btn btn-primary">Sign Up</a>
+                      
                     </form>
                 </div>
                 
             </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="validation.js"></script>
 </body>
 </html>
